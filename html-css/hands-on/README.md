@@ -2,4 +2,4 @@
 
 List of hands-on trainings within HTML&CSS Plus workshop as follows;
 
-ADD VOLTRANCLUB
+ADD VOLTRANCLUB.
