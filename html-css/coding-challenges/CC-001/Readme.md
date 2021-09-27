@@ -33,8 +33,8 @@
 ## Notes
 
 - How to host a website on Github:
-    *  [Github-Server](hhttps://www.youtube.com/watch?v=8hrJ4oN1u_8)
-
+    *  [Github-Server](https://www.youtube.com/watch?v=8hrJ4oN1u_8)
+    
     *  [Publish and share your own website for free with GitHub](https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5)
 
 <center> ⌛ Happy Coding  ✍ </center>
