@@ -29,7 +29,7 @@ Project aims to create parallax website.
 
 ## Objective
 
-Build a Landing that is functionally similar to this: [Parallax Website](https://aaron-clarusway.github.io/parallax-website/)
+Build a Landing that is functionally similar to this: [Parallax Website](https://mark-mad.github.io/parallax-website/)
 
 ### At the end of the project, following topics are to be covered;
 
