@@ -1,4 +1,4 @@
-
+// Conditionals
 
 /* let score = 85;
 // let grade = score >= 50
@@ -45,7 +45,14 @@ score >= 80 ? console.log(`Tebrikler notunuz ${score}, çok iyi bir öğrencisin
  */
 
 
-let username
+/* let userName;
+
+console.log(userName && console.log(`Merhaba ${userName}`)); */
+
+
+//Switch Case Yapısı
+
+
 
 
 
