@@ -32,3 +32,60 @@ while (randomNumber !== 6) {
     break;
   }
 } */
+
+/*  functions */
+/* 
+function square(num) {
+  num = num * num;
+  return num;
+}
+
+let myNum = 4;
+
+console.log(square(myNum));
+console.log(myNum);
+ */
+const students = ['Sait', 'Brown', 'Heisenberg', 'OzanEmre', 'Sergio'];
+
+/* console.log(`Welcome ${students[0]}!`);
+console.log(`Welcome ${students[1]}!`);
+console.log(`Welcome ${students[2]}!`);
+console.log(`Welcome ${students[3]}!`);
+ */
+
+/* students[0] = 'Mike';
+console.log(students); */
+
+// greetAll(students, console.log);
+
+function greet(student) {
+  // console.log(`Welcome ${student}!`);
+  return `Welcome ${student}!`;
+}
+function greetAll(who, callback) {
+  for (let i = 0; i < who.length; i++) {
+    callback(greet(who[i]));
+  }
+  //
+}
+
+function multiply(num1, num2) {
+  if (isNaN(num1) || isNaN(num2)) {
+    return; // 'please enter number';
+  }
+  return num1 * num2;
+}
+
+/* let result = multiply(4, 5);
+console.log('result :>> ', result); */
+
+// result = [quotient , remainder]
+// 13 %  4 = 3 kalan 1
+function divide(dividend, divider) {
+  let result = [];
+  // program logic
+  //
+  //
+  //
+  return result;
+}
