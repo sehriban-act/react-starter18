@@ -81,11 +81,50 @@ console.log('result :>> ', result); */
 
 // result = [quotient , remainder]
 // 13 %  4 = 3 kalan 1
-function divide(dividend, divider) {
-  let result = [];
-  // program logic
-  //
-  //
-  //
+/* function divide(dividend, divider) {
+  let quotient = dividend / divider;
+  let remainder = dividend % divider;
+  let result = [quotient, remainder];
+  console.log(quotient);
+  if (divider === 0) return;
   return result;
 }
+
+let result = divide(13, 4);
+console.log('result :>> ', result); */
+
+const studentObject = {
+  firstName: 'Yusuf',
+  studentNumber: 'C9303',
+};
+
+function sayHi() {
+  return `Welcome`;
+}
+
+// console.log(sayHi(studentObject));
+
+// console.log('#110 student :>> ', studentObject);
+
+/* 
+const sayHi2 = function () {
+  return 'Hello!';
+};
+console.log(sayHi2()); */
+
+// recursive
+/* function count(num) {
+  if (num === 10) return;
+  console.log(num);
+  count(++num);
+}
+
+count(1);
+ */
+
+// IIFE
+(function greet2() {
+  console.log('how do you do?');
+})();
+
+// greet2();
