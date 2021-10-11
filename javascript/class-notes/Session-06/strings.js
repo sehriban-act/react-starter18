@@ -59,6 +59,7 @@ console.log(n);
 console.log(n1);
 console.log(n2); */
 
+// Ödev -1
 // text içindeki tüm aranan karakterin (kaç tane varsa) index numarasını versin
 
 //replace
