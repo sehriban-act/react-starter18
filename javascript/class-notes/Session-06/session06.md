@@ -1,6 +1,4 @@
-# Functions (cont) & Strings
-
-Functions continued
+# Strings
 
 ## Strings
 
