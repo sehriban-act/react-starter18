@@ -8,3 +8,5 @@ List of projects within HTML&CSS Plus as follows;
 
 - [Project-003 :Parallax Web Site (HC-03)](./003-parallax-website/README.md)
 
+- [Project-004 :Checkout Form (HC-04)](./004-checkout-form/README.md)
+
