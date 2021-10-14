@@ -1,4 +1,4 @@
-var s = "Lorem Ipsum is simply dummy text of the printing and 'printing' typesetting industry.";
+// var s = "Lorem Ipsum is simply dummy text of the printing and 'printing' typesetting industry.";
 //Split()
 // console.log(s.split(" ")); // kelime kelime
 // console.log(s.split("")); // eleman elaman
@@ -44,11 +44,17 @@ var Pangram = pangram.toLocaleUpperCase();
 console.log(Pangram.toLowerCase());
 console.log(Pangram.toLocaleLowerCase('tr')); */
 
-var test = prompt('write anything').toLowerCase()
+// var test = prompt('write anything').toLowerCase()
 
-console.log(test);
+// console.log(test);
 
 
+//trim()
+// var s = "                 <-Welcome \t to Clarus\tway->                 "
+// console.log(s);
+// console.log(s.trimLeft());
+// console.log(s.trimRight());
+// console.log(s.trim());
 
 
 
