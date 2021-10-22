@@ -24,7 +24,7 @@ At the end of the this coding challenge, students will be able to;
 
 - Analyze a problem, identify and apply programming knowledge for appropriate solution.
 
-- Demonstrate their knowledge of algorithmic design principles by using JavaScript and Python effectively.
+- Demonstrate their knowledge of algorithmic design principles by using JavaScript effectively.
 
 
 ## Problem Statement
