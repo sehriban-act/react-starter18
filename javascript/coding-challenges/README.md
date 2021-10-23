@@ -20,6 +20,6 @@ List of coding challenges within JavaScript workshop as follows;
 
 - [Simple Calculator (CC-09)](./CC-09/README.md)
 
-- [Student Registeration (CC-10)](./CC-10/README.md)
+- [Student Registration (CC-10)](./CC-10/README.md)
 
 - [Capital Letters (CC-11)](./CC-11/README.md)
