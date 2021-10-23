@@ -4,7 +4,7 @@
 # Project-002 : To-Do App (JS-02)
 
 ## Description
-Project aims to create find the number game (between 0 to 100).
+Project aims to create a basic To-Do-App.
 
 ## Problem Statement
 
@@ -31,7 +31,11 @@ Project aims to create find the number game (between 0 to 100).
 
 ## Objective
 
-Make a To-Do App as in the sample designs.
+- Make a To-Do App as in the sample designs or create your own design.
+
+- Desired features: Create,Done / Undone and Delete.
+
+- Optional Features : Counter for tasks
 
 ### At the end of the project, following topics are to be covered;
 
@@ -77,5 +81,5 @@ Make a To-Do App as in the sample designs.
 - Step 5: Deploy your application on Github template to showcase your app within your team.
 
 
-## Happy coding 💪
+<center> ⌛💪 Happy Coding  ✍ </center>
 
