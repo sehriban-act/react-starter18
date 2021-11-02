@@ -17,25 +17,23 @@ At the end of the this project, students will be able to;
    
 ## Problem Statement
 
-- You can use checkout form template for project.
+- You can use [Checkout_Form](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/html-css/projects/004-checkout-form/) template for project.
 
-- Create a checkout page following the design.
+- Create a checkout page following the design and make the calculation of cart dynamically with using of DOM and Event in JS.
 
-![Form](checkout.png)
+![Form](checkout_app.gif)
 
-* Functionally similar to this: [Form](https://aaron-clarusway.github.io/form/)
+* Template similar to this: [Checkout_Form](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/html-css/projects/004-checkout-form/)
 
 -  User story;
 
-   - I can input email, phone, full name, address, city, country, and postal code
+   - When I click plus button on product's row, I can increase the product's quantity.
+   - When I click minus button on product's row, I can decrease the product's quantity, but minimum quantity value can be 1.
+   - When I click remove button on product's row, I can delete the product in the cart.
+   - When I change any combination of chart page(plus, minus, remove etc.), I want to see the new calculation of chart's prices in concerned fields.
 
-   - I can select at least 3 countries from the dropdown
+🔥 You don’t need to create a new html template in this project, you can use [Checkout_Form](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/html-css/projects/004-checkout-form/) template. We will be concerned in javascript side.
 
-   - When I click submit button or press enter, I can see a warning if validation fails
-
-   - When I click submit button or press enter, I can see a successful alert if validation succeeds
-
-🔥 You don’t need to use JS in this project but use correct input types and validation 
 
 ## Resources
 
