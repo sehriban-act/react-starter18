@@ -37,4 +37,4 @@ At the end of the this project, students will be able to;
 
 ## Resources
 
-- [Images]("./img")
+- [Images](./img)
