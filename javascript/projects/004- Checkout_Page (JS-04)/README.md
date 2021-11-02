@@ -1,19 +1,23 @@
-# Coding Challenge - 003 : Checkout Form
+<p>Clarusway<img align="right"
+  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-Purpose of the this coding challenge is to write a code that make a checkout form.
+# Project-004 : Checkout_Page (JS-04)
+
+## Description
+Project aims to create a real checkout page of a e-commerce website.
 
 ## Learning Outcomes
 
-At the end of the this coding challenge, students will be able to;
+At the end of the this project, students will be able to;
 
-- analyze a problem, identify and apply programming knowledge for appropriate solution.
+- analyze a problem, create a e-commerce website page.
 
-- demonstrate their knowledge of algorithmic design principles by using function effectively.
+- demonstrate their knowledge of algorithmic design principles for dynamic calculation of product's cart.
 
    
 ## Problem Statement
 
-- Write a code that creates a checkout form.
+- You can use checkout form template for project.
 
 - Create a checkout page following the design.
 
@@ -31,10 +35,8 @@ At the end of the this coding challenge, students will be able to;
 
    - When I click submit button or press enter, I can see a successful alert if validation succeeds
 
-🔥 You don’t need to use JS in this challenge but use correct input types and validation 
+🔥 You don’t need to use JS in this project but use correct input types and validation 
 
 ## Resources
 
-- [Images]("./IMG")
-
-- [Fonts]("./FONTS")
+- [Images]("./img")
