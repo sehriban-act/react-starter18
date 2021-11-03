@@ -6,3 +6,5 @@ List of coding challenges within HTML&CSS Plus workshop as follows;
 
 - [CC - 002 : CSS Blog](./CC-002/README.pdf)
 
+- [CC - 003 : CSS Grid](./CC-003/README.pdf)
+
