@@ -29,7 +29,7 @@ Project aims to create your development team web page.
 
 ## Objective
 
-Build a responsive web page similar to [Project 005 Snapshot](Project_006_.png)
+Build a responsive web page similar to [Project 006 Snapshot](Project_006_.png)
 Add a theme button to switch your page theme day or night.
 
 - ![Project 006 Snapshot](project.gif)
