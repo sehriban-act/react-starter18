@@ -18,16 +18,25 @@
     </style>
   </head>
   <body>
-    <table class="table bg-warning">
-      <tr>
-        <td><img src="./img/letter.png" alt="" width="150px" /></td>
-        <td>
-          <h5>Contact Us</h5>
-          <p>We would love to hear from you!</p>
-        </td>
-      </tr>
-      <tr class="bg-secondary"></tr>
-    </table>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="" />
+
+    <br /><br />
+
+    <div class="input-group mb-3">
+      <label class="input-group-text w-25" for="username">Username: </label>
+      <input type="text" class="form-control" name="username" id="username" />
+    </div>
+
+    <div class="input-group mb-3">
+      <label class="input-group-text w-25" for="password">Password: </label>
+      <input type="text" class="form-control" name="password" id="password" />
+    </div>
+
+    <div class="input-group mb-3">
+      <label class="input-group-text w-25" for="address">Address: </label>
+      <textarea class="form-control" name="address" id="address"></textarea>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
