@@ -38,6 +38,66 @@
       <textarea class="form-control" name="address" id="address"></textarea>
     </div>
 
+    <label for="" class="form-label">Cities</label>
+    <input type="text" list="citylist" class="form-control" />
+    <datalist id="citylist">
+      <option value="İstanbul"></option>
+      <option value="Ankara"></option>
+      <option value="İzmir"></option>
+    </datalist>
+
+    <label for="" class="form-label mt-3">Upload your photo: </label>
+    <input type="file" class="form-control" />
+
+    <label for="" class="form-label mt-3">Upload your files: </label>
+    <input type="file" class="form-control" />
+
+    <h5 class="mt-5">Select your age group:</h5>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input mx-3" id="age1" />
+      <label for="age1" class="form-check-label">10-30</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input mx-3" id="age2" />
+      <label for="age2" class="form-check-label">30-50</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input mx-3" id="age3" />
+      <label for="age3" class="form-check-label">50-70</label>
+    </div>
+
+    <h5 class="mt-5">Select yourfavourite car:</h5>
+    <div class="form-check">
+      <input
+        type="radio"
+        class="form-check-input mx-3"
+        id="car1"
+        name="cars"
+        checked
+      />
+      <label for="car1" class="form-check-label">Porche</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input mx-3" id="car2" name="cars" />
+      <label for="car2" class="form-check-label">Ferrari</label>
+    </div>
+
+    <div class="form-check form-control-lg form-switch">
+      <input type="checkbox" class="form-check-input" id="switch" />
+      <label for="switch" class="form-check-label">SWITCH</label>
+    </div>
+
+    <br />
+
+    <div class="mt-3">
+      <label for="" class="form-label">Education:</label>
+      <select name="" id="" class="form-select">
+        <option value="">High School</option>
+        <option value="">Bachelor Degree</option>
+        <option value="">MAster Degree</option>
+      </select>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
