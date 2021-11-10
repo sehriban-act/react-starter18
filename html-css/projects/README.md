@@ -12,5 +12,5 @@ List of projects within HTML&CSS Plus as follows;
 
 - [Project-005 :Web Site Page Design (HC-05)](./005-Website%20Page%20Design/README.md)
 
-- [Project-006 :Team Members Page (HC-06)](./006-team-members-page/README.md)
+- [Project-006 :Team Members Page (HC-06)](./006-team-members-page/readme.md)
 
