@@ -1,7 +1,7 @@
 <p>Clarusway<img align="right"
   src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-# JS-CC-008 : Check Triangle
+# JS-CC-012 : Check Triangle
 
 - Determine if a triangle is **equilateral**, **isosceles**, or **scalene** by using `class` structures.
 
