@@ -23,3 +23,5 @@ List of coding challenges within JavaScript workshop as follows;
 - [Student Registration (CC-10)](./CC-10/README.md)
 
 - [Capital Letters (CC-11)](./CC-11/README.md)
+
+- [Check Triangle (CC-12)](./CC-12/README.md)
