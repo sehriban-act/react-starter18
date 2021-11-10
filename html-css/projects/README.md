@@ -10,3 +10,7 @@ List of projects within HTML&CSS Plus as follows;
 
 - [Project-004 :Checkout Form (HC-04)](./004-checkout-form/README.md)
 
+- [Project-005 :Web Site Page Design (HC-05)](./005-Website%20Page%20Design/README.md)
+
+- [Project-006 :Team Members Page (HC-06)](./006-team-members-page/README.md)
+
