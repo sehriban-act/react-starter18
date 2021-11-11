@@ -34,3 +34,6 @@ function addArray1(array, printFunction) {
 }
 
 const integers = [1, 3, 5];
+
+addArray1(integers, alert);
+addArray1(integers, (x) => console.log(x));
