@@ -34,3 +34,5 @@ console.log(answerArr);
 
 // !Example-4 (Array with map function)
 // !------------------------------------------------------------
+const square = Array.from([1, 2, 3], (x) => x * x);
+console.log(square);
