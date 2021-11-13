@@ -20,6 +20,58 @@
   <body>
     <h1>Hello, Clarusway!</h1>
 
+    <button
+      class="btn btn-primary"
+      data-bs-toggle="tooltip"
+      title="Tooltip is here"
+    >
+      Tooltip
+    </button>
+
+    <button
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      title="Tooltip is here"
+      data-bs-placement="top"
+    >
+      Tooltip
+    </button>
+
+    <button
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      title="Tooltip is here"
+      data-bs-placement="right"
+    >
+      Tooltip
+    </button>
+    <button
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      title="Tooltip is here"
+      data-bs-placement="bottom"
+    >
+      Tooltip
+    </button>
+    <button
+      class="btn btn-secondary"
+      data-bs-toggle="tooltip"
+      title="Tooltip is here"
+      data-bs-placement="left"
+    >
+      Tooltip
+    </button>
+    <br /><br />
+
+    <button
+      class="btn btn-primary"
+      data-bs-toggle="tooltip"
+      title="<em>Tooltip</em>  <u>with</u>  <b>HTML</b>"
+      data-bs-html="true"
+    >
+      Tooltip
+    </button>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -30,5 +82,14 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
   </body>
 </html>
