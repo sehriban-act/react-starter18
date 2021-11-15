@@ -121,28 +121,44 @@ function cayDemle() {
     })
     .catch(err => console.log(err));
 }
-cayDemle();
+// cayDemle();
 
 function suyuKaynat() {
   return new Promise((resolve, reject) => {
-    const suKaynadi = !Math.floor(Math.random() * 2);
+    const suKaynadi = Math.floor(Math.random() * 2);
     if (suKaynadi) {
       wait(1000);
       resolve('su kaynadi');
     } else {
-      reject('Kettle arizali');
+      reject(new Error('Kettle arizali'));
     }
   });
 }
 
 function demEkle() {
   return new Promise((resolve, reject) => {
-    const cayMevcut = !Math.floor(Math.random() * 2);
+    const cayMevcut = Math.floor(Math.random() * 2);
     if (cayMevcut) {
       wait(1000);
       resolve('cay eklendi');
     } else {
-      reject('cay bitmiş');
+      reject(new Error('cay bitmiş'));
     }
   });
 }
+
+async function cayDemle2() {
+  try {
+    const status1 = await suyuKaynat();
+    console.log(status1);
+    const status2 = await demEkle();
+    console.log(status2);
+    const status3 = await Promise.resolve('Cay hazir afiyet olsun');
+    console.log(status3);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+cayDemle2();
+console.log('aaa');
