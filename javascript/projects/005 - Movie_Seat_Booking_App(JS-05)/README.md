@@ -23,7 +23,7 @@ At the end of the this project, students will be able to;
 
 * Template similar to this: [ToDo App](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/javascript/projects/002%20-%20To-Do-App%20(JS-02))
 
--  User story;
+User story;
 
   - Display UI with movie select, screen, seats, legend & seat info
   - User can select a movie/price
@@ -32,7 +32,7 @@ At the end of the this project, students will be able to;
   - Number of seats and price will update
   - Save seats, movie and price to localStorage so that UI is still populated on refresh
 
-🔥 You don’t need to create a new html template in this project, you can use [Movie_Seat_Booking_App](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/javascript/projects/005%20-%20Movie_Seat_Booking_App(JS-05)) template. We will be concerned in javascript side.
+🔥 You don’t need to create a new template for this project, you can use [Movie_Seat_Booking_App](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/javascript/projects/005%20-%20Movie_Seat_Booking_App(JS-05)) template for html and css. We will be concerned in javascript side.
 
 
 
