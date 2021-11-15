@@ -21,8 +21,6 @@ At the end of the this project, students will be able to;
 
 ![Form](movie_seat_booking.gif)
 
-* Template similar to this: [ToDo App](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/javascript/projects/002%20-%20To-Do-App%20(JS-02))
-
 User story;
 
   - Display UI with movie select, screen, seats, legend & seat info
