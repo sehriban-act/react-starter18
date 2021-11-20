@@ -1,7 +1,7 @@
 // * XMLHttpRequest - XHR
 // ! old way, not common anymore
 
-const getCountryDataXHR = (country, className = '') => {
+/* const getCountryDataXHR = (country, className = '') => {
   const request = new XMLHttpRequest();
   request.open(
     'GET',
@@ -16,7 +16,7 @@ const getCountryDataXHR = (country, className = '') => {
     console.log(data);
     renderCountry(data, className);
   });
-};
+}; */
 
 // getCountryDataXHR('italy');
 // getCountryDataXHR('turkey');
@@ -31,7 +31,7 @@ const renderCountry = (data, className = '') => {
     population,
     languages,
     currencies,
-  } = data;
+  } = data; // countryName
   const countryElm = document.querySelector('.countries');
   const htmlContent = `
   <div class="country ${className}">
@@ -44,9 +44,9 @@ const renderCountry = (data, className = '') => {
       <p class="country__row"> <span><i class="fas fa-lg fa-users"></i></span>${(
         +population / 1_000_000
       ).toFixed(1)}M People</p>
-      <p class="country__row"><span><i class="fas fa-lg fa-comments"></i></span>${
-        Object.values(languages)[0]
-      }</p>
+      <p class="country__row"><span><i class="fas fa-lg fa-comments"></i></span>${Object.values(
+        languages
+      )}</p>
       <p class="country__row"><span><i class="fas fa-lg fa-money-bill-wave"></i></span>${
         Object.values(currencies)[0].name
       } <strong>${Object.values(currencies)[0].symbol}</strong>
@@ -60,10 +60,21 @@ const renderCountry = (data, className = '') => {
 
 // const result = fetch('https://restcountries.com/v3.1/name/turkey');
 // console.log(result);
-fetch('https://restcountries.com/v3.1/name/italy')
-  .then(response => response.json())
-  .then(data => {
-    // console.log(jsonData);
-    const [countryData] = data;
-    renderCountry(countryData);
-  });
+const showCountryProm = countryName => {
+  fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+    .then(response => {
+      if (!response.ok) throw new Error(`something is wrong! ${response.status}`);
+      // console.log(response);
+
+      return response.json();
+    })
+    .then(data => {
+      // console.log(data);
+      const [countryData] = data;
+      // console.log(countryData);
+      renderCountry(countryData);
+    })
+    .catch(err => console.log(err.message));
+};
+showCountryProm('south africa');
+showCountryProm('belgium');
