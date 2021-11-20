@@ -61,9 +61,7 @@ const renderCountry = (data, className = '') => {
 // const result = fetch('https://restcountries.com/v3.1/name/turkey');
 // console.log(result);
 fetch('https://restcountries.com/v3.1/name/italy')
-  .then(response => {
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
     // console.log(jsonData);
     const [countryData] = data;
