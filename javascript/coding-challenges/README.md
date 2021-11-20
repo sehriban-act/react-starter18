@@ -25,3 +25,5 @@ List of coding challenges within JavaScript workshop as follows;
 - [Capital Letters (CC-11)](./CC-11/README.md)
 
 - [Check Triangle (CC-12)](./CC-12/README.md)
+
+- [Roman Numerals (CC-13)](./CC-13/README.md)
