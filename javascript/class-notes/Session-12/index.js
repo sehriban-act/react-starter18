@@ -87,10 +87,11 @@ const getCountryDataByName = async countryName => {
     return data[0];
     // return countryData;
   } catch (error) {
+    renderError(error.message);
     console.log(error.message);
   } finally {
     // always executed
-    console.log('try catch block finished either successfully or with failures');
+    // console.log('try catch block finished either successfully or with failures');
   }
 };
 
@@ -99,5 +100,53 @@ const showCountry = async countryName => {
   renderCountry(countryData);
 };
 
-showCountry('turkey');
-showCountry('belgium');
+// showCountry('Usa');
+// showCountry('Japan');
+// showCountry('Brazil');
+// showCountry('UK');
+// showCountry('Turkey');
+
+const getCountryDataByCode = async countryCode => {
+  try {
+    const response = await fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`);
+    if (!response.ok) throw new Error(`something is wrong! ${response.status}`);
+    const data = await response.json();
+    // const [countryData] = data;
+    return data[0];
+    // return countryData;
+  } catch (error) {
+    renderError(error.message);
+    console.log(error.message);
+  } finally {
+    // always executed
+    // console.log('try catch block finished either successfully or with failures');
+  }
+};
+
+const showCountryWithNeighbours = async countryName => {
+  try {
+    const countryData = await getCountryDataByName(countryName);
+    renderCountry(countryData);
+    const neighbours = countryData.borders;
+    if (!neighbours) throw new Error('No neighbours 🤷‍♀️');
+    neighbours.forEach(async neighbour => {
+      const country = await getCountryDataByCode(neighbour);
+      renderCountry(country, 'neighbour');
+    });
+    /*     const neighbour = neighbours[0];
+    const neighbourData = await getCountryDataByCode(neighbour);
+    renderCountry(neighbourData, 'neighbour'); */
+  } catch (error) {
+    renderError(error.message);
+    // console.log(error);
+  }
+};
+
+const renderError = msg => {
+  const countryElm = document.querySelector('.countries');
+  countryElm.insertAdjacentText('beforeend', msg);
+  countryElm.style.opacity = 1;
+};
+
+showCountryWithNeighbours('turkey');
+showCountryWithNeighbours('usa');
