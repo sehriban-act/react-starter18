@@ -96,8 +96,13 @@ const getCountryDataByName = async countryName => {
 };
 
 const showCountry = async countryName => {
-  const countryData = await getCountryDataByName(countryName);
-  renderCountry(countryData);
+  try {
+    const countryData = await getCountryDataByName(countryName);
+    renderCountry(countryData);
+  } catch (error) {
+    renderError(error.message);
+    console.log(error.message);
+  }
 };
 
 // showCountry('Usa');
@@ -148,5 +153,5 @@ const renderError = msg => {
   countryElm.style.opacity = 1;
 };
 
-showCountryWithNeighbours('turkey');
-showCountryWithNeighbours('usa');
+showCountryWithNeighbours('australia');
+// showCountryWithNeighbours('russia');
