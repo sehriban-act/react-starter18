@@ -60,12 +60,11 @@ const renderCountry = (data, className = '') => {
 
 // const result = fetch('https://restcountries.com/v3.1/name/turkey');
 // console.log(result);
-const showCountryProm = countryName => {
+/* const showCountryProm = countryName => {
   fetch(`https://restcountries.com/v3.1/name/${countryName}`)
     .then(response => {
       if (!response.ok) throw new Error(`something is wrong! ${response.status}`);
       // console.log(response);
-
       return response.json();
     })
     .then(data => {
@@ -75,6 +74,30 @@ const showCountryProm = countryName => {
       renderCountry(countryData);
     })
     .catch(err => console.log(err.message));
+}; */
+// showCountryProm('south africa');
+// showCountryProm('belgium');
+
+const getCountryDataByName = async countryName => {
+  try {
+    const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+    if (!response.ok) throw new Error(`something is wrong! ${response.status}`);
+    const data = await response.json();
+    // const [countryData] = data;
+    return data[0];
+    // return countryData;
+  } catch (error) {
+    console.log(error.message);
+  } finally {
+    // always executed
+    console.log('try catch block finished either successfully or with failures');
+  }
 };
-showCountryProm('south africa');
-showCountryProm('belgium');
+
+const showCountry = async countryName => {
+  const countryData = await getCountryDataByName(countryName);
+  renderCountry(countryData);
+};
+
+showCountry('turkey');
+showCountry('belgium');
