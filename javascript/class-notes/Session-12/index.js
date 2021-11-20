@@ -18,9 +18,9 @@ const getCountryDataXHR = (country, className = '') => {
   });
 };
 
-getCountryDataXHR('italy');
-getCountryDataXHR('turkey');
-getCountryDataXHR('france');
+// getCountryDataXHR('italy');
+// getCountryDataXHR('turkey');
+// getCountryDataXHR('france');
 
 const renderCountry = (data, className = '') => {
   const {
@@ -57,3 +57,15 @@ const renderCountry = (data, className = '') => {
   countryElm.insertAdjacentHTML('beforeend', htmlContent);
   countryElm.style.opacity = 1;
 };
+
+// const result = fetch('https://restcountries.com/v3.1/name/turkey');
+// console.log(result);
+fetch('https://restcountries.com/v3.1/name/italy')
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    // console.log(jsonData);
+    const [countryData] = data;
+    renderCountry(countryData);
+  });
