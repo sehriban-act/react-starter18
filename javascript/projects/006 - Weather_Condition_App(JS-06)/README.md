@@ -1,14 +1,34 @@
-## Movie Seat Booking
+<p>Clarusway<img align="right"
+  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-Display movie choices and seats in a theater to select from in order to purchase tickets
+# Project-006 : Weather_Condition_App (JS-05)
 
-## Project Specifications
+## Description
+Project aims to display current weather data of searched city around the world with fetching Weather Api data.
 
-- Display UI with movie select, screen, seats, legend & seat info
-- User can select a movie/price
-- User can select/deselect seats
-- User can not select occupied seats
-- Number of seats and price will update
-- Save seats, movie and price to local storage so that UI is still populated on refresh
+## Learning Outcomes
 
-Design inspiration from [Dribbble](https://dribbble.com/shots/3628370-Movie-Seat-Booking)
+At the end of the this project, students will be able to;
+
+- analyze a problem, create a weather condition app pOpulated with a real weather api.
+
+- demonstrate their knowledge of algorithmic design principles.
+
+   
+## Problem Statement
+
+- Create a weather condititon page following the design and populate data for searched city with using of fetch and axios in JS.
+
+![Form](weather_app.gif)
+
+User story;
+
+  - User can search a city around the world.
+  - The App can fetch api with the searched city name(... and apikey if it is obligatory).
+  - User can display weather data of searched city in weather card.
+  - User can display list of searched city weather data card like on gif.
+  - If new searched city is in the weather data list, app can display a warning text to user on page.
+
+🔥 You can use [OpenWeather Api](https://openweathermap.org/) for your app. 
+
+🔥 You don’t need to create a new template for this project, you can use [Waether Condition_App](https://github.com/clarusway/clarusway-full-stack-9-21/tree/main/javascript/projects/006%20-%20Weather_Condition_App(JS-06)) template for html and css. We will be concerned in javascript side.
