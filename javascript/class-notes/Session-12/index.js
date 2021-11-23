@@ -19,7 +19,7 @@
 }; */
 
 // getCountryDataXHR('italy');
-// getCountryDataXHR('turkey');
+// getCountryDataXHR('turkey'); **
 // getCountryDataXHR('france');
 
 const renderCountry = (data, className = '') => {
