@@ -18,4 +18,10 @@ function dec(amount = 1) {
 
 let localCounter = 5;
 
-const moduleName = 'This is mymodule 1';
+const moduleName = 'mymodule 1';
+export default moduleName;
+// export default 'mymodule 1'
+
+export { WORKING_HOURS_WEEK, WORKING_HOURS_WEEK as WHW, add as sum, counter, dec, inc };
+
+console.log(`${moduleName} is loaded`);
