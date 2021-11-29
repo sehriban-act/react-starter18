@@ -16,10 +16,14 @@ function dec(amount = 1) {
   return counter;
 }
 
+export default function (num) {
+  return num * num;
+}
+
 let localCounter = 5;
 
 const moduleName = 'mymodule 1';
-export default moduleName;
+// export default moduleName;
 // export default 'mymodule 1'
 
 export { WORKING_HOURS_WEEK, WORKING_HOURS_WEEK as WHW, add as sum, counter, dec, inc };
