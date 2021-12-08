@@ -1,7 +1,7 @@
 <p>Clarusway<img align="right"
   src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
 
-# Project-006 : Task Tracker (RC-06)
+# Project-002 : Task Tracker (RC-02)
 
 ## Description
 
@@ -14,7 +14,7 @@ Project aims to create a Task Tracker App.
 ## Project Skeleton
 
 ```
-006 - Task Tracker (folder)
+002 - Task Tracker (folder)
 |
 |----readme.md         # Given to the students (Definition of the project)
 SOLUTION
@@ -41,7 +41,7 @@ SOLUTION
 
 ## Expected Outcome
 
-![Project 006 Snapshot](react-task-tracker.gif)
+![Project 002 Snapshot](react-task-tracker.gif)
 
 ## Objective
 
