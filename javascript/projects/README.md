@@ -13,3 +13,5 @@ Javascript Workshop contains hands-on trainings and projects.
 - [Movie Seat Booking Page (JS-05)](./005%20-%20Movie_Seat_Booking_App(JS-05)/README.md)
 
 - [Weather Condition App (JS-06)](./006%20-%20Weather_Condition_App(JS-06)/README.md)
+
+- [Hangman Game (JS-07)](./006%20-%20Hangman-game%20(JS-07)/README.md)
