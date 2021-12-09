@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const FunctionalComponent = () => {
   const [count, setCount] = useState(0)
   const [age, setAge] = useState(4)
-  const [user, setUser] = useState({ name: 'Felix', age: 25, email: 'felix@gmail.com' })
+  // const [user, setUser] = useState({ name: 'Felix', age: 25, email: 'felix@gmail.com' })
 
-  // const increase = () => {
-  //   setCount(count + 1)
-  // }
+  useEffect(() => {
+    // count !== 0 && alert(`new notification, total: ${count} `)
+    console.log('UseEffect')
+  }, [count, age])
+
   const increase = () => setCount(count + 1)
 
   const increaseAge = () => setAge(age + 1)
-
-  const updateUser = () => {
-    setUser({ ...user, name: 'John' })
-  }
-
+  // const updateUser = () => {
+  //   setUser({ ...user, name: 'John' })
+  // }
+  console.log('Func Comp Rendered')
   return (
     <div className="function">
       <h2>Functional Component</h2>
@@ -24,10 +25,10 @@ const FunctionalComponent = () => {
       <button onClick={increase}>Increase</button>
       <p>Age : {age}</p>
       <button onClick={increaseAge}>Increase Age</button>
-      <p>Name: {user.name} </p>
+      {/* <p>Name: {user.name} </p>
       <p>Age: {user.age}</p>
       <p>Email: {user.email}</p>
-      <button onClick={updateUser}>UpdateUser</button>
+      <button onClick={updateUser}>UpdateUser</button> */}
     </div>
   )
 }
