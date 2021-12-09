@@ -17,6 +17,10 @@ class ClassComponent extends React.Component {
     console.log('Class Comp Updated')
   }
 
+  componentWillUnmount() {
+    console.log('Class Comp Unmounted')
+  }
+
   render() {
     return (
       <div className="class">
