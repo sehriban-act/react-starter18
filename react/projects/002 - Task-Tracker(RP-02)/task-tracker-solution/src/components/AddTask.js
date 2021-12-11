@@ -6,16 +6,12 @@ const AddTask = ({ addTask }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(text);
-    console.log(day);
+    addTask({ text, day, isDone: false });
+    setText("");
+    setDay("");
+    // console.log(text);
+    // console.log(day);
   };
-
-  //   const onSubmit = (e) => {
-  //     e.preventDefault();
-  //     addTask({ text, day, isDone: false });
-  //     setText("");
-  //     setDay("");
-  //   };
 
   return (
     <form className="add-form" onSubmit={onSubmit}>
