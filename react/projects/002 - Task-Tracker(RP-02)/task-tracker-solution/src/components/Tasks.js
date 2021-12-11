@@ -3,7 +3,7 @@
 import Task from "./Task";
 
 const Tasks = ({ tasks, deleteTask }) => {
-  console.log("tasks", tasks);
+  // console.log("tasks", tasks);
   return (
     <div>
       {tasks.map((task) => (

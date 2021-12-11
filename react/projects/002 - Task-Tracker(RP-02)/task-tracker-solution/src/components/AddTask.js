@@ -1,8 +1,14 @@
 import { useState } from "react";
 
 const AddTask = ({ addTask }) => {
-  //   const [text, setText] = useState("");
-  //   const [day, setDay] = useState("");
+  const [text, setText] = useState("");
+  const [day, setDay] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(text);
+    console.log(day);
+  };
 
   //   const onSubmit = (e) => {
   //     e.preventDefault();
@@ -12,7 +18,7 @@ const AddTask = ({ addTask }) => {
   //   };
 
   return (
-    <form className="add-form">
+    <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
         <label htmlFor="task">Task</label>
         <input
@@ -21,8 +27,9 @@ const AddTask = ({ addTask }) => {
           type="text"
           placeholder="AddTask"
           required
-          //   value={text}
-          //   onChange={(e) => setText(e.target.value)}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          //   onChange={(e) => console.log(e.target.value)}
         />
       </div>
       <div className="form-control">
@@ -33,8 +40,9 @@ const AddTask = ({ addTask }) => {
           type="text"
           placeholder="Add Day & Time"
           required
-          //   value={day}
-          //   onChange={(e) => setDay(e.target.value)}
+          value={day}
+          onChange={(e) => setDay(e.target.value)}
+          //   onChange={(e) => console.log(e.target.value)}
         />
       </div>
       <input type="submit" value="Add Task" className="btn btn-block" />
