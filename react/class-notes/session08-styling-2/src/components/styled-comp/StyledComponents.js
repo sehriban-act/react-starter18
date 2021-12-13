@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './button/Button.styles';
+import ExtendedComp from './extended-link/ExtendedComp';
 import HeaderText from './header/HeaderText';
 import Link from './link/Link';
 import Wrapper from './wrapper/Wrapper';
@@ -17,6 +18,7 @@ const StyledComponents = () => {
       >
         Learn FS Development
       </Link>
+      <ExtendedComp secondary>Extended Link</ExtendedComp>
       <Button primary>Primary</Button>
       <Button>Primary</Button>
     </Wrapper>
