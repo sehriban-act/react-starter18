@@ -3,6 +3,7 @@ import { green, orange } from '@mui/material/colors';
 import './App.css';
 import AppBarComp from './components/material-ui/app-bar/AppBarComp';
 import Buttons from './components/material-ui/buttons/Buttons';
+import Cards from './components/material-ui/cards/Cards';
 import CheckBoxComp from './components/material-ui/checkbox/CheckBoxComp';
 import StyledButton from './components/material-ui/styled-button/StyledButton';
 import TextFieldComp from './components/material-ui/text-field/TextFieldComp';
@@ -25,6 +26,7 @@ function App() {
         <header className="App-header">
           {/* <StyledComponents /> */}
           <StyledButton />
+          <Cards />
           <TextFieldComp />
           <CheckBoxComp />
           <Buttons />
