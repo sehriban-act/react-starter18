@@ -19,3 +19,5 @@ List of teamwork agendas for Full Stack 9/21  learning path as follows;
 - [Sprint 6 Week 1](./tw-008-student.pdf)
 
 - [Sprint 6 Week 2](./tw-009-student.pdf)
+
+- [Sprint 7 Week 1](./tw-010-student.pdf)

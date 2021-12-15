@@ -29,3 +29,5 @@ List of coding challenges within JavaScript workshop as follows;
 - [Roman Numerals (CC-13)](./CC-13/README.md)
 
 - [Bracket Validator (CC-14)](./CC-14/README.md)
+
+- [Sliding Window Maximum (CC-15)](./CC-15/README.md)
