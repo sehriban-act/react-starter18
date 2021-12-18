@@ -1,32 +1,36 @@
-import "./App.css";
-import { useState } from "react";
-import Header from "./components/Header";
-import Tasks from "./components/Tasks";
-import AddTask from "./components/AddTask";
+import './App.css';
+import { useEffect, useState } from 'react';
+import Header from './components/Header';
+import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
+import axios from 'axios';
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: "Study React Pre-Class Notes",
-      day: "Dec 12th at 2:30pm",
-      isDone: false,
-    },
-    {
-      id: 2,
-      text: "Feed the Dog",
-      day: "Dec 13th at 1:30pm",
-      isDone: true,
-    },
-    {
-      id: 3,
-      text: "Attend In-Class",
-      day: "Dec 14th at 3:00pm",
-      isDone: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const [showAddTask, setShowAddTask] = useState(false);
+
+  const baseUrl = 'http://localhost:5000/tasks';
+
+  // Create Read Update Delete
+
+  //Fetch tasks
+  // const fetchTasks = async () => {
+  //   const res = await fetch(baseUrl);
+  //   const data = await res.json();
+  //   console.log(data);
+  // };
+
+  //Fetch tasks with axios
+  const fetchTasks = async () => {
+    // const res = await axios.get(baseUrl);
+    const { data } = await axios.get(baseUrl);
+    setTasks(data);
+  };
+
+  useEffect(() => {
+    fetchTasks();
+  }, []);
 
   // ADD TASK
   const addTask = (newTask) => {
@@ -70,7 +74,7 @@ function App() {
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} deleteTask={deleteTask} toggleDone={toggleDone} />
       ) : (
-        <p style={{ textAlign: "center" }}>NO TASK TO SHOW</p>
+        <p style={{ textAlign: 'center' }}>NO TASK TO SHOW</p>
       )}
     </div>
   );
