@@ -13,14 +13,46 @@ import {
 } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import { Formik } from 'formik';
+import * as Yup from 'yup';
+
+const signUpValidationSchema = Yup.object().shape({
+  username: Yup.string()
+    .required('Display name is required')
+    .min(2, 'Too short')
+    .max(15, 'Must be 15 char or less'),
+  email: Yup.string().email('Invalid Email').required('Email is required'),
+  password: Yup.string()
+    .required('No password provided')
+    .min(8, 'Password is too short - should be 8 chars minimum')
+    .matches(/\d+/, 'Password must have a number')
+    .matches(/[a-z]+/, 'Password must have a lowercase')
+    .matches(/[A-Z]+/, 'Password must have a uppercase')
+    .matches(/[!?.@#$%^&*()-+]+/, 'Password must have a special char'),
+  password2: Yup.string()
+    .required('No password provided')
+    .min(8, 'Password is too short - should be 8 chars minimum')
+    .oneOf([Yup.ref('password'), null], 'Passwords must match'),
+});
 
 function Register() {
   const initialValues = {
-    username: 'felix',
+    username: '',
     email: '',
     password: '',
     password2: '',
   };
+
+  const handleSubmit = (values, { resetForm }) => {
+    // console.log(values);
+    alert(
+      `username: ${values.username}
+      email: ${values.email}
+      password: ${values.password}
+      password2: ${values.password2}`
+    );
+    resetForm();
+  };
+
   return (
     <Container
       sx={{
@@ -43,9 +75,20 @@ function Register() {
       <Typography sx={{ margin: '1rem' }} variant="h4">
         Sign Up
       </Typography>
-      <Formik initialValues={initialValues}>
-        {(values, handleChange) => (
-          <form>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={signUpValidationSchema}
+      >
+        {({
+          values,
+          handleChange,
+          handleSubmit,
+          touched,
+          errors,
+          handleBlur,
+        }) => (
+          <form onSubmit={handleSubmit}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <TextField
@@ -54,6 +97,9 @@ function Register() {
                   variant="outlined"
                   value={values.username}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  helperText={touched.username && errors.username}
+                  error={touched.username && Boolean(errors.username)}
                   fullWidth
                 />
               </Grid>
@@ -64,6 +110,9 @@ function Register() {
                   variant="outlined"
                   value={values.email}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  helperText={touched.email && errors.email}
+                  error={touched.email && Boolean(errors.email)}
                   fullWidth
                 />
               </Grid>
@@ -74,6 +123,9 @@ function Register() {
                   type="password"
                   value={values.password}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  helperText={touched.password && errors.password}
+                  error={touched.password && Boolean(errors.password)}
                   fullWidth
                 />
               </Grid>
@@ -85,6 +137,9 @@ function Register() {
                   type="password"
                   value={values.password2}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  helperText={touched.password2 && errors.password2}
+                  error={touched.password2 && Boolean(errors.password2)}
                   fullWidth
                 />
               </Grid>
