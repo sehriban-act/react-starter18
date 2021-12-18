@@ -12,16 +12,16 @@ function App() {
 
   const baseUrl = 'http://localhost:5000/tasks';
 
-  // Create Read Update Delete
+  //* Create Read Update Delete
 
-  //Fetch tasks
+  //* Fetch tasks
   // const fetchTasks = async () => {
   //   const res = await fetch(baseUrl);
   //   const data = await res.json();
   //   console.log(data);
   // };
 
-  //Fetch tasks with axios
+  //* Fetch tasks with axios
   const fetchTasks = async () => {
     // const res = await axios.get(baseUrl);
     const { data } = await axios.get(baseUrl);
@@ -32,19 +32,48 @@ function App() {
     fetchTasks();
   }, []);
 
-  // ADD TASK
-  const addTask = (newTask) => {
-    // console.log("Add Task From App.js");
-    const id = Math.floor(Math.random() * 100) + 1;
-    const addNewTask = { id, ...newTask };
-    setTasks([...tasks, addNewTask]);
+  //* ADD TASK
+  // const addTask = async (newTask) => {
+  //   const res = await fetch(baseUrl, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //     },
+  //     body: JSON.stringify(newTask),
+  //   });
+  //   fetchTasks();
+  // };
+
+  //* Add tasks
+  const addTask = async (newTask) => {
+    await axios.post(baseUrl, newTask);
+    fetchTasks();
   };
 
-  // DELETE TASK
-  const deleteTask = (deletedTaskId) => {
-    // console.log("delete", deletedTaskId);
-    setTasks(tasks.filter((task) => task.id !== deletedTaskId));
+  // const addTask = (newTask) => {
+  //   // console.log("Add Task From App.js");
+  //   const id = Math.floor(Math.random() * 100) + 1;
+  //   const addNewTask = { id, ...newTask };
+  //   setTasks([...tasks, addNewTask]);
+  // };
+
+  //* DELETE TASK
+  // const deleteTask = async (deletedTaskId) => {
+  //   await fetch(`${baseUrl}/${deletedTaskId}`, {
+  //     method: 'DELETE',
+  //   });
+  //   fetchTasks();
+
+  //* Delete with axios
+  const deleteTask = async (deletedTaskId) => {
+    await axios.delete(`${baseUrl}/${deletedTaskId}`);
+    fetchTasks();
   };
+
+  // const deleteTask = (deletedTaskId) => {
+  //   // console.log("delete", deletedTaskId);
+  //   setTasks(tasks.filter((task) => task.id !== deletedTaskId));
+  // };
 
   //TOGGLE DONE
   const toggleDone = (toggleDoneId) => {
