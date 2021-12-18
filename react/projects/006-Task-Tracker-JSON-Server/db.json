@@ -10,7 +10,7 @@
       "id": 2,
       "text": "Feed the Dog",
       "day": "Feb 6th at 1:30pm",
-      "isDone": true
+      "isDone": false
     },
     {
       "text": "Wash Car",

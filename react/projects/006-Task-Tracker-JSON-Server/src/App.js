@@ -75,14 +75,37 @@ function App() {
   //   setTasks(tasks.filter((task) => task.id !== deletedTaskId));
   // };
 
-  //TOGGLE DONE
-  const toggleDone = (toggleDoneId) => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === toggleDoneId ? { ...task, isDone: !task.isDone } : task
-      )
-    );
+  //* TOGGLE DONE
+  const toggleDone = async (toggleDoneId) => {
+    // const res = await fetch(`${baseUrl}/${toggleDoneId}`);
+    // const data = await res.json();
+    // const updatedTask = { ...data, isDone: !data.isDone };
+    // console.log(updatedTask);
+
+    // await fetch(`${baseUrl}/${toggleDoneId}`, {
+    //   method: 'PUT',
+    //   headers: {
+    //     'Content-type': 'application/json',
+    //   },
+    //   body: JSON.stringify(updatedTask),
+    // });
+    // fetchTasks();
+
+    //* Toggle Done with axios
+    const { data } = await axios.get(`${baseUrl}/${toggleDoneId}`);
+    const updatedTask = { ...data, isDone: !data.isDone };
+
+    await axios.put(`${baseUrl}/${toggleDoneId}`, updatedTask);
+    fetchTasks();
   };
+
+  // const toggleDone = (toggleDoneId) => {
+  //   setTasks(
+  //     tasks.map((task) =>
+  //       task.id === toggleDoneId ? { ...task, isDone: !task.isDone } : task
+  //     )
+  //   );
+  // };
 
   // SHOW ADD TASK
   const toggleShow = () => setShowAddTask(!showAddTask);
