@@ -31,3 +31,5 @@ List of coding challenges within JavaScript workshop as follows;
 - [Bracket Validator (CC-14)](./CC-14/README.md)
 
 - [Sliding Window Maximum (CC-15)](./CC-15/README.md)
+
+- [Vowels in a string(CC-16)](./CC-16/README.md)
