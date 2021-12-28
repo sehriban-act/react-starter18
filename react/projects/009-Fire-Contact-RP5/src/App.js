@@ -2,8 +2,9 @@
 import './App.css';
 import FormComponent from './components/form/FormComponent';
 import Contacts from './components/contacts/Contacts';
-
+const initialValues={username:"", phoneNumber:"", gender:"NO INFO"}
 function App() {
+  const[info,setInfo]=useState()
   return (
     <div className="App">
      <FormComponent/>
