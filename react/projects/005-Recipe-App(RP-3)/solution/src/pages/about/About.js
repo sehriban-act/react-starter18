@@ -1,6 +1,10 @@
 import React from 'react'
 import { AboutContainer, HeaderContainer, InfoContainer, StyledImage } from './AboutStyle'
 import codingSvg from "../../assets/coding.svg"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8410a72d7829e84803f5f21bfd6fab0c81aa8b17
 const About = () => {
     return (
       <AboutContainer>

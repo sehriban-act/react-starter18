@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8410a72d7829e84803f5f21bfd6fab0c81aa8b17
 export const AboutContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -13,6 +17,10 @@ export const AboutContainer = styled.div`
     font-size: 3rem;
   }
 `;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8410a72d7829e84803f5f21bfd6fab0c81aa8b17
 export const InfoContainer = styled.div`
   text-align: right;
   margin: 0 10px;
@@ -24,6 +32,7 @@ export const InfoContainer = styled.div`
     color: white;
   }
 `;
+<<<<<<< HEAD
 export const HeaderContainer = styled.div``;
 export const StyledImage = styled.img`
   width: 500px;
@@ -32,3 +41,12 @@ export const StyledImage = styled.img`
 
 
 
+=======
+
+export const HeaderContainer = styled.div``;
+
+export const StyledImage = styled.img`
+  width: 500px;
+  margin-bottom: 2rem;
+`;
+>>>>>>> 8410a72d7829e84803f5f21bfd6fab0c81aa8b17
