@@ -1,11 +1,11 @@
 import React from 'react';
 import UserItem from './UserItem';
 
-const UserContainer = ({ users }) => {
+const UserContainer = ({ users, add }) => {
   console.log('Rendering: User Container Comp.');
   return (
     <div className="users">
-      <button id="add-button" onClick={null}>
+      <button id="add-button" onClick={add}>
         Add User
       </button>
       {users?.map((user) => {
@@ -15,4 +15,4 @@ const UserContainer = ({ users }) => {
   );
 };
 
-export default UserContainer;
+export default React.memo(UserContainer);

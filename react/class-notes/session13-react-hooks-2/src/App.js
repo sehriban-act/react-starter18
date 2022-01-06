@@ -2,16 +2,22 @@
 import fs from './assets/fs.png';
 import aws from './assets/aws.png';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import Header from './components/Header';
 import axios from 'axios';
 import UserContainer from './components/UserContainer';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   // const [img, setImg] = useState(null);
   const [users, setUsers] = useState([]);
-  // console.log({ users });
+  console.log({ users });
   const [text, setText] = useState('');
   console.log('text', text);
   const [search, setSearch] = useState('');
@@ -29,6 +35,25 @@ function App() {
     // setSearch(inputRef.current.value);
   };
 
+  // const filteredUsers = users.filter((user) => {
+  //   return user.name.toLowerCase().includes(search.toLowerCase());
+  // });
+  const filteredUsers = useMemo(
+    () =>
+      users.filter((user) => {
+        console.log('filter');
+        return user.name.toLowerCase().includes(search.toLowerCase());
+      }),
+    [users, search]
+  );
+
+  const addUser = useCallback(() => {
+    setUsers([
+      ...users,
+      { id: users.length + 1, name: `Clarusway-${users.length - 9}` },
+    ]);
+  }, [users]);
+
   // const increase = () => {
   //   setCount(count + 1);
   // };
@@ -43,7 +68,7 @@ function App() {
       {/* <input ref={inputRef} /> */}
       <input onChange={(e) => setText(e.target.value)} />
       <button onClick={handleSearch}>Search User</button>
-      <UserContainer users={users} />
+      <UserContainer users={filteredUsers} add={addUser} />
     </div>
   );
 }
