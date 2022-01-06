@@ -1,11 +1,13 @@
-import UseRefComponent from './components/UseRefComponent';
+// import UseRefComponent from './components/UseRefComponent';
 
 import React from 'react';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <UseRefComponent />
+      {/* <UseRefComponent /> */}
+      <Header />
     </div>
   );
 }
